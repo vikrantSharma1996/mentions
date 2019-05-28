@@ -1,3 +1,45 @@
-<resources>
-    <string name="app_name">KnoxMentions</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Mentions</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello WORKSPACE fragment</string>
+    <string name="workspace_title" tools:ignore="MissingTranslation">Workspace</string>
+    <string name="channel_title" tools:ignore="MissingTranslation">%1$s (%2$s)</string>
+
+    <string name="drawer_open" tools:ignore="MissingTranslation">Drawer Open</string>
+    <string name="drawer_close" tools:ignore="MissingTranslation">Drawer Close</string>
+    <string name="welcome_workspace" tools:ignore="MissingTranslation">Welcome to Your \n Workspace!</string>
+    <string name="workspace_des" tools:ignore="MissingTranslation">All the members In workspace can use \n a variety of features to
+        collaborate tightly.</string>
+    <string name="create_workspace" tools:ignore="MissingTranslation">Create WorkSpace</string>
+    <string name="general" tools:ignore="MissingTranslation">General</string>
+    <string name="wait_a_second" tools:ignore="MissingTranslation">Please wait a second</string>
+    <string name="connecting_to_team" tools:ignore="MissingTranslation"> Connecting to Teams…</string>
+    <string name="text_count" tools:ignore="MissingTranslation">%1$d/20</string>
+    <string name="create_workspace_title" tools:ignore="MissingTranslation">Let’s create \nyour new workspace!</string>
+    <string name="workspace_textViewDescription" tools:ignore="MissingTranslation">Select representative color and\nenter a name for your new workspace.</string>
+    <string name="workspace_name" tools:ignore="MissingTranslation">WorkSpace name</string>
+    <string name="invite_new_member" tools:ignore="MissingTranslation">Invite New Member</string>
+    <string name="workspace_created_msg" tools:ignore="MissingTranslation">Wow! Workspace is created.\nYou can talk to all the members\nin this General channel.\nNow, invite the members to collaborate!</string>
+
+    <string name="workspace_on_mobile" tools:ignore="MissingTranslation">Workspace\nContinues on Mobile!</string>
+    <string name="learn_more" tools:ignore="MissingTranslation">Learn more</string>
+    <string name="Search_by_name_or_chat_room">Search by name or chat room</string>
+    <string name="contact_invite_option_title" tools:ignore="MissingTranslation">Invitation Option</string>
+    <string name="contact_invite_option_description" tools:ignore="MissingTranslation">Messages before the invitation time can be shown.</string>
+    <string name="channel_chat_hint" tools:ignore="MissingTranslation">Enter your message</string>
+    <string name="channel_general" tools:ignore="MissingTranslation">General</string>
+    <string name="invite_member_hint" tools:ignore="MissingTranslation">You can see or invite \\nmore members here.</string>
+    <string name="collab_workspace" tools:ignore="MissingTranslation">Collaborate \n with Workspace!</string>
+    <string name="workspace_dis_first" tools:ignore="MissingTranslation"><![CDATA[<b>Messages will be kept for up to 1 year.</b> <br> Don\'t worry about backing up your data,
+        just focus on collaboration! :^</br>]]></string>
+    <string name="workspace_dis_sec" tools:ignore="MissingTranslation"><![CDATA[Conversate via messenger, Sharing files via mail. Isn\'t it annoying?<br><b>Share conversation and files here in workspace.</b></br>]]></string>
+    <string name="workspace_des_third" tools:ignore="MissingTranslation"><![CDATA[<b>Separate chats from work-related messages by creating channels by topics.</b>]]></string>
+    <string name="creating_workspace" tools:ignore="MissingTranslation"> Creating a workspace…</string>
+    <string name="invite_workspace_title">Invite to workspace</string>
+    <string name="notice_board">Notice</string>
+    <string name="addchannel">Add Channel</string>
+    <string name="goto_app_market">Go to App Market</string>
+    <string name="work_space_detail">Workspace Details</string>
+    <string name="character_limit_exceeded" tools:ignore="MissingTranslation">Character Limit Exceeded</string>
+    <string name="empty_workspace_name" tools:ignore="MissingTranslation">First fill the workspace name</string>
 </resources>

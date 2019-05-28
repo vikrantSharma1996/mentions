@@ -1,0 +1,43 @@
+<resources xmlns:ns0="http://schemas.android.com/tools">
+    <string name="app_name">提及</string>
+
+    <string name="hello_blank_fragment" ns0:ignore="MissingTranslation">你好WORKSPACE片段</string>
+    <string name="workspace_title" ns0:ignore="MissingTranslation">工作區</string>
+    <string name="channel_title" ns0:ignore="MissingTranslation">％1 $ s（％2 $ s）</string>
+
+    <string name="drawer_open" ns0:ignore="MissingTranslation">抽屜打開</string>
+    <string name="drawer_close" ns0:ignore="MissingTranslation">抽屜關閉</string>
+    <string name="welcome_workspace" ns0:ignore="MissingTranslation">歡迎來到您的工作區！</string>
+    <string name="workspace_des" ns0:ignore="MissingTranslation">工作區中的所有成員都可以使用\ n各種功能         緊密合作。</string>
+    <string name="create_workspace" ns0:ignore="MissingTranslation">創建WorkSpace</string>
+    <string name="general" ns0:ignore="MissingTranslation">一般</string>
+    <string name="wait_a_second" ns0:ignore="MissingTranslation">請等一下</string>
+    <string name="connecting_to_team" ns0:ignore="MissingTranslation"> 連接到團隊......</string>
+    <string name="text_count" ns0:ignore="MissingTranslation">％1 $ d / 20</string>
+    <string name="create_workspace_title" ns0:ignore="MissingTranslation">讓我們創建你的新工作區吧！</string>
+    <string name="workspace_textViewDescription" ns0:ignore="MissingTranslation">選擇代表顏色並輸入新工作區的名稱。</string>
+    <string name="workspace_name" ns0:ignore="MissingTranslation">WorkSpace名稱</string>
+    <string name="invite_new_member" ns0:ignore="MissingTranslation">邀請新會員</string>
+    <string name="workspace_created_msg" ns0:ignore="MissingTranslation">哇！工作區已創建。\ n您可以在此常規頻道中與所有成員交談。\ n現在，邀請成員進行協作！</string>
+
+    <string name="workspace_on_mobile" ns0:ignore="MissingTranslation">工作區\ n繼續在移動設備上！</string>
+    <string name="learn_more" ns0:ignore="MissingTranslation">學到更多</string>
+    <string name="Search_by_name_or_chat_room">按名稱或聊天室搜索</string>
+    <string name="contact_invite_option_title" ns0:ignore="MissingTranslation">邀請選項</string>
+    <string name="contact_invite_option_description" ns0:ignore="MissingTranslation">可以顯示邀請時間之前的消息。</string>
+    <string name="channel_chat_hint" ns0:ignore="MissingTranslation">輸入您的消息</string>
+    <string name="channel_general" ns0:ignore="MissingTranslation">一般</string>
+    <string name="invite_member_hint" ns0:ignore="MissingTranslation">您可以在此處查看或邀請\ n nmore會員。</string>
+    <string name="collab_workspace" ns0:ignore="MissingTranslation">與Workspace協作\ n！</string>
+    <string name="workspace_dis_first" ns0:ignore="MissingTranslation">&lt;b&gt;消息將保留長達1年。&lt;/ b&gt; &lt;br&gt;不要擔心備份數據，         只關注合作！ ：^ &lt;/ BR&gt;</string>
+    <string name="workspace_dis_sec" ns0:ignore="MissingTranslation">通過信使對話，通過郵件共享文件。難道不煩人嗎？&lt;br&gt; &lt;b&gt;在工作區中分享會話和文件。&lt;/ b&gt; &lt;/ br&gt;</string>
+    <string name="workspace_des_third" ns0:ignore="MissingTranslation">&lt;b&gt;通過按主題創建頻道，與工作相關的消息分開聊天。&lt;/ b&gt;</string>
+    <string name="creating_workspace" ns0:ignore="MissingTranslation"> 創建工作區......</string>
+    <string name="invite_workspace_title">邀請工作區</string>
+    <string name="notice_board">注意</string>
+    <string name="addchannel">添加頻道</string>
+    <string name="goto_app_market">去App Market</string>
+    <string name="work_space_detail">工作區詳細信息</string>
+    <string name="character_limit_exceeded" ns0:ignore="MissingTranslation">字符限制超出</string>
+    <string name="empty_workspace_name" ns0:ignore="MissingTranslation">首先填寫工作區名稱</string>
+    </resources>
