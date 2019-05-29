@@ -1,4 +1,4 @@
-package com.example.vikrantsharma.knoxmentions;
+package com.example.vikrantsharma.knoxmentions.utils;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -8,15 +8,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vikrantsharma.knoxmentions.R;
 import com.example.vikrantsharma.knoxmentions.mentions.RecyclerViewPresenter;
+import com.example.vikrantsharma.knoxmentions.model.SlashCommands;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class SlashPresenter extends RecyclerViewPresenter<SlahsCommands> {
+public class SlashPresenter extends RecyclerViewPresenter<SlashCommands> {
 
     protected Adapter adapter;
 
@@ -40,13 +43,13 @@ public class SlashPresenter extends RecyclerViewPresenter<SlahsCommands> {
 
     @Override
     protected void onQuery(@Nullable CharSequence query) {
-        List<SlahsCommands> all = SlahsCommands.SLASH;
+        List<SlashCommands> all = SlashCommands.SLASH;
         if (TextUtils.isEmpty(query)) {
             adapter.setData(all);
         } else {
             query = query.toString().toLowerCase();
-            List<SlahsCommands> list = new ArrayList<>();
-            for (SlahsCommands u : all) {
+            List<SlashCommands> list = new ArrayList<>();
+            for (SlashCommands u : all) {
                 if (u.getCommand().toLowerCase().contains(query) ||
                         u.getMsg().toLowerCase().contains(query)|| u.getHint().toLowerCase().contains(query)) {
                     list.add(u);
@@ -60,10 +63,11 @@ public class SlashPresenter extends RecyclerViewPresenter<SlahsCommands> {
 
     class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
 
-        private List<SlahsCommands> data;
+        private List<SlashCommands> data;
 
         public class Holder extends RecyclerView.ViewHolder {
             private View root;
+            private ImageView imageicon;
             private TextView fullname;
             private TextView username;
             public Holder(View itemView) {
@@ -71,10 +75,11 @@ public class SlashPresenter extends RecyclerViewPresenter<SlahsCommands> {
                 root = itemView;
                 fullname = ((TextView) itemView.findViewById(R.id.fullname));
                 username = ((TextView) itemView.findViewById(R.id.username));
+                imageicon=((ImageView)itemView.findViewById(R.id.imageicon));
             }
         }
 
-        public void setData(List<SlahsCommands> data) {
+        public void setData(List<SlashCommands> data) {
             this.data = data;
         }
 
@@ -100,7 +105,8 @@ public class SlashPresenter extends RecyclerViewPresenter<SlahsCommands> {
                 holder.root.setOnClickListener(null);
                 return;
             }
-            final SlahsCommands user = data.get(position);
+            final SlashCommands user = data.get(position);
+            holder.imageicon.setImageResource(R.drawable.imageview_sample_image);
             holder.fullname.setText(user.getHint());
             holder.username.setText("/" + user.getCommand());
             holder.root.setOnClickListener(new View.OnClickListener() {

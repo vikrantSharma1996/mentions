@@ -1,4 +1,4 @@
-package com.example.vikrantsharma.knoxmentions;
+package com.example.vikrantsharma.knoxmentions.activities;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -13,6 +13,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.vikrantsharma.knoxmentions.R;
+import com.example.vikrantsharma.knoxmentions.model.SlashCommands;
+import com.example.vikrantsharma.knoxmentions.utils.SlashPresenter;
+import com.example.vikrantsharma.knoxmentions.model.User;
+import com.example.vikrantsharma.knoxmentions.utils.UserPresenter;
 import com.example.vikrantsharma.knoxmentions.mentions.Autocomplete;
 import com.example.vikrantsharma.knoxmentions.mentions.AutocompleteCallback;
 import com.example.vikrantsharma.knoxmentions.mentions.AutocompletePolicy;
@@ -46,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AutocompletePolicy policyMentions = new CharPolicy('@'); // Look for @ mentions
         AutocompletePolicy policySlash = new CharPolicy('/'); // Look for / mentions
         AutocompletePresenter<User> presenterMentions = new UserPresenter(this);
-        AutocompletePresenter<SlahsCommands> presenterSlash = new SlashPresenter(this);
+        AutocompletePresenter<SlashCommands> presenterSlash = new SlashPresenter(this);
         AutocompleteCallback<User> callbackMentions = new AutocompleteCallback<User>() {
             @Override
             public boolean onPopupItemClicked(Editable editable, User item) {
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 int start = range[0];
                 int end = range[1];
                 String replacement = item.getUsername();
+                //String replacement = item.getFullname();
                 editable.replace(start, end, replacement);
                 // This is better done with regexes and a TextWatcher, due to what happens when
                 // the user clears some parts of the text. Up to you.
@@ -67,10 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onPopupVisibilityChanged(boolean shown) {
             }
         };
-        AutocompleteCallback<SlahsCommands> callbackSlash = new AutocompleteCallback<SlahsCommands>() {
+        AutocompleteCallback<SlashCommands> callbackSlash = new AutocompleteCallback<SlashCommands>() {
 
             @Override
-            public boolean onPopupItemClicked(Editable editable, SlahsCommands item) {
+            public boolean onPopupItemClicked(Editable editable, SlashCommands item) {
                 // Replace query text with the full name.
                 int[] range = CharPolicy.getQueryRange(editable);
                 if (range == null) return false;
@@ -96,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .with(presenterMentions)
                 .with(callbackMentions)
                 .build();
-        mentionsAutocomplete = Autocomplete.<SlahsCommands>on(edit)
+        mentionsAutocomplete = Autocomplete.<SlashCommands>on(edit)
                 .with(elevation)
                 .with(backgroundDrawable)
                 .with(policySlash)

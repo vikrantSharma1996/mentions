@@ -20,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 
 public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
@@ -39,6 +40,9 @@ public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
      */
     public final static class Builder<T> {
         private EditText source;
+
+       // private RelativeLayout rlayout;
+
         private AutocompletePresenter<T> presenter;
         private AutocompletePolicy policy;
         private AutocompleteCallback<T> callback;
@@ -48,6 +52,8 @@ public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
         private Builder(EditText source) {
             this.source = source;
         }
+
+      //  private Builder(RelativeLayout rlayout){this.rlayout=rlayout;}
 
         /**
          * Registers the {@link AutocompletePresenter} to be used, responsible for showing
@@ -123,6 +129,8 @@ public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
         }
 
         private void clear() {
+            //rlayout=null;
+
             source = null;
             presenter = null;
             callback = null;
@@ -147,6 +155,7 @@ public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
     private AutocompletePresenter<T> presenter;
     private AutocompleteCallback<T> callback;
     private EditText source;
+   // private RelativeLayout rlayout;
 
     private boolean block;
     private boolean disabled;
@@ -159,7 +168,19 @@ public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
         callback = builder.callback;
         source = builder.source;
 
+        //rlayout=builder.rlayout;
+
+
+
         // Set up popup
+//        popup = new AutocompletePopup(source.getContext());
+//        popup.setAnchorView(source);
+//        popup.setGravity(Gravity.START);
+//        popup.setModal(false);
+//        popup.setBackgroundDrawable(builder.backgroundDrawable);
+//        popup.setElevation(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, builder.elevationDp,
+//                source.getContext().getResources().getDisplayMetrics()));
+
         popup = new AutocompletePopup(source.getContext());
         popup.setAnchorView(source);
         popup.setGravity(Gravity.START);
@@ -168,9 +189,10 @@ public final class Autocomplete<T> implements TextWatcher, SpanWatcher {
         popup.setElevation(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, builder.elevationDp,
                 source.getContext().getResources().getDisplayMetrics()));
 
+
         // popup dimensions
         AutocompletePresenter.PopupDimensions dim = this.presenter.getPopupDimensions();
-        popup.setWidth(dim.width);
+       // popup.setWidth(dim.width);
         popup.setHeight(dim.height);
         popup.setMaxWidth(dim.maxWidth);
         popup.setMaxHeight(dim.maxHeight);
