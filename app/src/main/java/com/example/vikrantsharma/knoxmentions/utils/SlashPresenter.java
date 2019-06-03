@@ -67,15 +67,15 @@ public class SlashPresenter extends RecyclerViewPresenter<SlashCommands> {
 
         public class Holder extends RecyclerView.ViewHolder {
             private View root;
-            private ImageView imageicon;
-            private TextView fullname;
-            private TextView username;
+           // private ImageView imageicon;
+            private TextView commandname;
+            private TextView commandhint;
             public Holder(View itemView) {
                 super(itemView);
                 root = itemView;
-                fullname = ((TextView) itemView.findViewById(R.id.fullname));
-                username = ((TextView) itemView.findViewById(R.id.username));
-                imageicon=((ImageView)itemView.findViewById(R.id.imageicon));
+                commandname = ((TextView) itemView.findViewById(R.id.commandname));
+                commandhint = ((TextView) itemView.findViewById(R.id.commandhint));
+            //    imageicon=((ImageView)itemView.findViewById(R.id.imageicon));
             }
         }
 
@@ -90,7 +90,7 @@ public class SlashPresenter extends RecyclerViewPresenter<SlashCommands> {
 
         @Override
         public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new Holder(LayoutInflater.from(getContext()).inflate(R.layout.user, parent, false));
+            return new Holder(LayoutInflater.from(getContext()).inflate(R.layout.slash, parent, false));
         }
 
         private boolean isEmpty() {
@@ -100,15 +100,16 @@ public class SlashPresenter extends RecyclerViewPresenter<SlashCommands> {
         @Override
         public void onBindViewHolder(Holder holder, int position) {
             if (isEmpty()) {
-                holder.fullname.setText("No user here!");
-                holder.username.setText("Sorry!");
+                holder.commandhint.setText("No user here!");
+                holder.commandname.setText("Sorry!");
                 holder.root.setOnClickListener(null);
                 return;
             }
             final SlashCommands user = data.get(position);
-            holder.imageicon.setImageResource(R.drawable.imageview_sample_image);
-            holder.fullname.setText(user.getHint());
-            holder.username.setText("/" + user.getCommand());
+            //holder.imageicon.setImageResource(R.drawable.imageview_sample_image);
+
+            holder.commandhint.setText(user.getHint());
+            holder.commandname.setText("/" + user.getCommand());
             holder.root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

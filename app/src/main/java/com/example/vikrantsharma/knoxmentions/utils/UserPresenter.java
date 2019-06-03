@@ -57,7 +57,7 @@ public class UserPresenter extends RecyclerViewPresenter<User> {
             List<User> list = new ArrayList<>();
             for (User u : all) {
                 if (u.getFullname().toLowerCase().contains(query) ||
-                        u.getUsername().toLowerCase().contains(query)) {
+                        u.getUsername().toLowerCase().contains(query)||u.getImageurl().contains(query)) {
                     list.add(u);
                 }
             }

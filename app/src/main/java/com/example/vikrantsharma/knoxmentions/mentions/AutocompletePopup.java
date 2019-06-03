@@ -10,22 +10,15 @@ import android.support.annotation.StyleRes;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.PopupWindowCompat;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
-//import com.otaliastudios.autocomplete.AutocompletePresenter;
+import com.example.vikrantsharma.knoxmentions.R;
 
-/**
- * A simplified version of andriod.widget.ListPopupWindow, which is the class used by
- * AutocompleteTextView.
- *
- * Other than being simplified, this deals with Views rather than ListViews, so the content
- * can be whatever. Lots of logic (clicks, selections etc.) has been removed because we manage that
- * in {@link AutocompletePresenter}.
- *
- */
 class AutocompletePopup {
     private static final String TAG = AutocompletePopup.class.getSimpleName();
 
@@ -121,9 +114,9 @@ class AutocompletePopup {
     /**
      * Sets the operating mode for the soft input area.
      * @param mode The desired mode, see
-     *        {@link WindowManager.LayoutParams#softInputMode}
+     *        {@link android.view.WindowManager.LayoutParams#softInputMode}
      *        for the full list
-     * @see WindowManager.LayoutParams#softInputMode
+     * @see android.view.WindowManager.LayoutParams#softInputMode
      * @see #getSoftInputMode()
      */
     void setSoftInputMode(int mode) {
@@ -133,7 +126,7 @@ class AutocompletePopup {
     /**
      * Returns the current value in {@link #setSoftInputMode(int)}.
      * @see #setSoftInputMode(int)
-     * @see WindowManager.LayoutParams#softInputMode
+     * @see android.view.WindowManager.LayoutParams#softInputMode
      */
     int getSoftInputMode() {
         return mPopup.getSoftInputMode();
